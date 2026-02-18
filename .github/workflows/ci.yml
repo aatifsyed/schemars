@@ -40,11 +40,11 @@ jobs:
         continue-on-error: ${{ matrix.allow_failure }}
         working-directory: ./schemars
       - name: Run tests
-        run: cargo test --verbose --all-features --no-fail-fast
+        run: cargo test --verbose --all-features --no-fail-fast --ignore-rust-version
         continue-on-error: ${{ matrix.allow_failure }}
         working-directory: ./schemars
       - name: Run derive tests
-        run: cargo test --verbose --all-features --no-fail-fast
+        run: cargo test --verbose --all-features --no-fail-fast --ignore-rust-version
         continue-on-error: ${{ matrix.allow_failure }}
         working-directory: ./schemars_derive
       - name: Check with latest dependency versions
